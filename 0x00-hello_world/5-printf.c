@@ -1,10 +1,8 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
  * Description: print the statement
  * Return: Always 0 (Success)
- *    
  */
 int main(void)
 {
