@@ -15,10 +15,11 @@ int main(void)
 		{
 			putchar((d % 10) + '0');
 			putchar((d2 % 10) + '0');
-			if (d != 8 && d2 != 9)
+			if (d == 8 && d2 == 9)
 			{
-				putchar(',');
-				putchar(' ');
+				/*putchar(',');*/
+				/*putchar(' ');*/
+				continue;
 			}
 		}
 	}
