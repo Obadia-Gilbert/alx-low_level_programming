@@ -7,16 +7,19 @@
 int main(void)
 {
 	int d;
-	
-	for (d = 0; d < 90; d++)
+	int d2;
+
+	for (d = 0; d < 9; d++)
 	{
-		putchar((d / 10) + '0');
-		putchar((d % 10) + '0');
-		if (d != 99)
+		for (d2 = d + 1; d2 < 10; d2++)
 		{
-			putchar(',');
-			putchar(' ');
-		}
+			putchar((d / 10) + '0');
+			putchar((d2 % 10) + '0');
+			if (d != 8 && d2 != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 	}
 	putchar('\n');
 	return (0);
