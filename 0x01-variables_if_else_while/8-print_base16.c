@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Enty Point
- * Description: print 
+ * Description: print base 16
  * Return: Always 0 (success)
  */
 int main(void)
