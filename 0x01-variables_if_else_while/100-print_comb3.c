@@ -13,7 +13,7 @@ int main(void)
 	{
 		for (d2 = d + 1; d2 < 10; d2++)
 		{
-			putchar((d / 10) + '0');
+			putchar((d % 10) + '0');
 			putchar((d2 % 10) + '0');
 			if (d != 8 && d2 != 9)
 			{
