@@ -1,19 +1,18 @@
-#include <main.h>
+#include "main.h"
 /**
- * main  - Entry Point 
- * Description: print _putchar
- * Return: Always 0 (success)
- */
+* main - prints the string "Alxseprog" from a character array.
+* @i - take each char in array
+* Return: 0 on success.
+*/
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
+	char c[] = "Alxseprog";
+	int i;
+
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(c[i]);
+	}
 	_putchar('\n');
 	return (0);
 }
