@@ -1,7 +1,7 @@
 #include "main.h"
 /**
   * print_alphabet_x10 - repeats the print_alphabet 10 times.
-  *
+  * Description: function nested for loop
   * Return: Nothing.
   */
 void print_alphabet_x10(void)
