@@ -1,24 +1,24 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
-* _strcpy - Copy paste string
-* @dest: destination
-* @src: source
-*
-* Return: destination
-*/
+ * *_strcpy - copies the string including the null byte to the buffer
+ *@src: points to a string
+ *@dest: points to the buffer
+ * Return: Always 0.
+ */
 
 char *_strcpy(char *dest, char *src)
 {
-	int inc = 0;
+	int i;
 
-	while (*(src + inc) != '\0')
+	i = 0;
+	while (i >= 0)
 	{
-		*(dest + inc) = *(src + inc);
-		inc++;
+		dest[i] = src[i];
+	if (src[i] == '\0')
+		return (dest);
+	i++;
 	}
-	*(dest + inc) = '\0';
-
-
 	return (dest);
 }
