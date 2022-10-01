@@ -1,21 +1,33 @@
-#include "main.h"
+include "main.h"
 
 /**
- * _strncpy - a function that copies a string
- * @dest: copy to
- * @src: copy from
- * @n: input number of char
+ * _strspn - Entry point
+ * @s: input
+ * @accept: input
  * Return: Always 0 (Success)
  */
-char *_strncpy(char *dest, char *src, int n)
+unsigned int _strspn(char *s, char *accept)
 {
-	int i;
+	unsigned int i, n, value, check;
 
-	for (i = 0; src[i] != '\0'; i++)
-		if (i < n)
-			dest[i] = src[i];
-	while (i < n)
-		dest[i++] = '\0';
+	value = 0;
 
-	return (dest);
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		check = 0;
+
+		for (n = 0; accept[n] != '\0'; n++)
+		{
+			if (accept[n] == s[i])
+			{
+				value++;
+				check = 1;
+			}
+		}
+
+		if (check == 0)
+			return (value);
+	}
+
+	return (value);
 }
