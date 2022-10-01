@@ -1,31 +1,21 @@
 #include "main.h"
+
 /**
- * _strspn - gets the length of a prefix substring
- *
- * @s: segment to return bytes from
- * @accept: the bytes to include
- *
- * Return: the number of bytes in the initial segment of @s which consist only
- * of bytes from @accept
+ * _strncpy - a function that copies a string
+ * @dest: copy to
+ * @src: copy from
+ * @n: input number of char
+ * Return: Always 0 (Success)
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int i, j;
-	int c = 0;
+	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		if (s[i] != 32)
-		{
-			for (j = 0; accept[j] != '\0'; j++)
-			{
-				if (s[i] == accept[j])
-					c++;
-			}
-		}
-		else
-			return (c);
+	for (i = 0; src[i] != '\0'; i++)
+		if (i < n)
+			dest[i] = src[i];
+	while (i < n)
+		dest[i++] = '\0';
 
-	}
-	return (c);
+	return (dest);
 }
