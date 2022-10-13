@@ -1,29 +1,56 @@
 #include "3-calc.h"
 #include <stdio.h>
+/**
+ * op_add - add function
+ * @a: int type
+ * @b: int type
+ * Return: sum of two int
+ */
+int op_add(int a, int b)
+{
+	return (a + b);
+}
 
 /**
- * get_op_func - function to select operator
- *
- * @s: chat type
- * Return: always successful
+ * op_sub - substract function
+ * @a: int type
+ * @b: int type
+ * Return: subtract two ints
  */
-
-int (*get_op_func(char *s))(int, int)
+int op_sub(int a, int b)
 {
-	op_t ops[] = {
-		{"+", op_add},
-		{"-", op_sub},
-		{"*", op_mul},
-		{"/", op_div},
-		{"%", op_mod},
-		{NULL, NULL}
-	};
-	int i;
+	return (a - b);
+}
 
-	i = 0;
-	while (ops[i].op != NULL && strcmp(ops[i].op, s) != 0)
-	{
-		i++;
-	}
-	return (ops[i].f);
+/**
+ * op_mul - multiply function
+ * @a: int type
+ * @b: int type
+ * Return: multiply two ints
+ */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+
+/**
+ * op_div - divide two ints
+ * @a: int type
+ * @b: int type
+ * Return: divide two ints
+ */
+int op_div(int a, int b)
+{
+	return (a / b);
+}
+
+/**
+ * op_mod - modulos of two ints
+ * @a: int type
+ * @b: int type
+ * Return: modulus of two ints
+ */
+int op_mod(int a, int b)
+{
+	return (a % b);
 }
