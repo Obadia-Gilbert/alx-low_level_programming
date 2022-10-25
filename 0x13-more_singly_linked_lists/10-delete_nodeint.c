@@ -38,3 +38,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (previous_ptr)
 		previous_ptr->next = next_ptr->next;
 	free(next_ptr);
+
+	return (1);
+}
